@@ -33,7 +33,7 @@ Using Nala:&#x20;
 
 nala install `[package]`
 
-```
+```powershell
 // Some codeO JKFGKLÖSDFJKLASDJKLASDSDF
 ASD
 F
