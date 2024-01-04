@@ -29,7 +29,20 @@ description: >-
 
 Using Nala:&#x20;
 
-* To install a package: `nala install [package]`
+* To install a package:&#x20;
+
+nala install `[package]`
+
+```
+// Some codeO JKFGKLÖSDFJKLASDJKLASDSDF
+ASD
+F
+ASDF
+AS
+ASD
+F
+```
+
 * To remove a package: `nala remove [package]`
 * For more commands: `nala --help`
 
