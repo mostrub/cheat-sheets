@@ -164,3 +164,11 @@
   * [Windows DNS Server](windows/windows-dns-server.md)
   * [Windows Terminal.](windows/windows-terminal.md)
   * [Windows Updates](windows/windows-updates.md)
+
+## REN
+
+* [Teams](ren/teams/README.md)
+  * [GLPI Intragration](ren/teams/glpi-intragration.md)
+  * [Projektvorlagen der IT-Abteilung von Renata SA](ren/teams/projektvorlagen-der-it-abteilung-von-renata-sa/README.md)
+    * [Microsoft Task Deutsch Template](ren/teams/projektvorlagen-der-it-abteilung-von-renata-sa/microsoft-task-deutsch-template.md)
+    * [Microsoft Task English Template](ren/teams/projektvorlagen-der-it-abteilung-von-renata-sa/microsoft-task-english-template.md)
