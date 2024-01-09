@@ -172,3 +172,7 @@
   * [Projektvorlagen der IT-Abteilung von Renata SA](ren/teams/projektvorlagen-der-it-abteilung-von-renata-sa/README.md)
     * [Microsoft Task Deutsch Template](ren/teams/projektvorlagen-der-it-abteilung-von-renata-sa/microsoft-task-deutsch-template.md)
     * [Microsoft Task English Template](ren/teams/projektvorlagen-der-it-abteilung-von-renata-sa/microsoft-task-english-template.md)
+* [GLPI](ren/glpi/README.md)
+  * [Englisch Integrating Email-to-Ticket Feature in GLPI](ren/glpi/englisch-integrating-email-to-ticket-feature-in-glpi.md)
+  * [Deutsch Integration der E-Mail-zu-Ticket-Funktion in GLPI](ren/glpi/deutsch-integration-der-e-mail-zu-ticket-funktion-in-glpi.md)
+* [Service Now](ren/service-now.md)
