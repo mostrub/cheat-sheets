@@ -6,7 +6,7 @@
 
 The **magic packet** contains the device's MAC address and a special sequence of bytes that the device recognizes as a **magic packet**. It consists of a 6-byte header (FF FF FF FF FF FF) followed by the repetition of the target device's MAC address 16 times, resulting in a total packet size of 102 bytes.
 
-It is typically sent as a broadcast using the [UDP](../networking/udp.md) protocol on port 0, 7, or 9 or directly over Ethernet as EtherType 0x0842. However, it's worth noting that **Wake on LAN (WoL)** can also be sent as a unicast packet. In a unicast configuration, the **magic packet** is sent directly to the specific IP address of the target device instead of being broadcasted to all devices on the network. This requires knowing the IP address of the device in advance.
+It is typically sent as a broadcast using the [UDP](udp.md) protocol on port 0, 7, or 9 or directly over Ethernet as EtherType 0x0842. However, it's worth noting that **Wake on LAN (WoL)** can also be sent as a unicast packet. In a unicast configuration, the **magic packet** is sent directly to the specific IP address of the target device instead of being broadcasted to all devices on the network. This requires knowing the IP address of the device in advance.
 
 ## Enabling Wake on LAN (WoL)
 
@@ -20,7 +20,7 @@ Most modern computers have a setting in the BIOS or UEFI settings that allows yo
 
 ### Enable Wake on LAN (WoL) in the operating system
 
-Some operating systems have settings that can enable or disable **Wake on LAN (WoL)** for network interfaces. For example, on [Linux](../linux/linux.md), you can use the [ethtool](../linux/ethtool.md) command to enable **Wake on LAN (WoL)** for a network interface.
+Some operating systems have settings that can enable or disable **Wake on LAN (WoL)** for network interfaces. For example, on [Linux](../os/linux/linux.md), you can use the [ethtool](../os/linux/ethtool.md) command to enable **Wake on LAN (WoL)** for a network interface.
 
 #### Enable Wake on LAN (WoL) on Linux
 
@@ -41,15 +41,15 @@ If the output shows "Wake-on: d", it means that Wake On LAN (WoL) is disabled.
 
 The following table shows the different values that can be displayed for the "Wake-on" setting:
 
-| Value | Description |
-| --- | --- |
-| `d` | Wake On LAN (WoL) is disabled |
-| `p` | Wake On LAN (WoL) is enabled for unicast packets |
-| `u` | Wake On LAN (WoL) is enabled for unicast and broadcast packets |
-| `m` | Wake On LAN (WoL) is enabled for multicast packets |
-| `b` | Wake On LAN (WoL) is enabled for broadcast packets |
-| `a` | Wake On LAN (WoL) is enabled for ARP packets |
-| `g` | Wake On LAN (WoL) is enabled for Magic packets |
+| Value | Description                                                    |
+| ----- | -------------------------------------------------------------- |
+| `d`   | Wake On LAN (WoL) is disabled                                  |
+| `p`   | Wake On LAN (WoL) is enabled for unicast packets               |
+| `u`   | Wake On LAN (WoL) is enabled for unicast and broadcast packets |
+| `m`   | Wake On LAN (WoL) is enabled for multicast packets             |
+| `b`   | Wake On LAN (WoL) is enabled for broadcast packets             |
+| `a`   | Wake On LAN (WoL) is enabled for ARP packets                   |
+| `g`   | Wake On LAN (WoL) is enabled for Magic packets                 |
 
 To enable Wake On LAN (WoL), use the following command:
 
@@ -67,7 +67,7 @@ post-up /usr/sbin/ethtool -s interface_name wol g
 
 ## Sending Magic Packets
 
-Once **Wake on LAN (WoL)** is enabled, you can use a utility like [etherwake](../linux/etherwake.md) or `wakeonlan` to send **magic packets** to wake up the device remotely.
+Once **Wake on LAN (WoL)** is enabled, you can use a utility like [etherwake](../os/linux/etherwake.md) or `wakeonlan` to send **magic packets** to wake up the device remotely.
 
 ## Troubleshooting
 
@@ -77,7 +77,7 @@ If you are having trouble getting **Wake on LAN (WoL)** to work, here are some t
 2. Make sure that **Wake on LAN (WoL)** is enabled for the network interface on the device you are trying to wake up.
 3. Make sure that the network interface is connected to a network that is configured to allow **Wake on LAN (WoL)**.
 
-If you're still not able to get **Wake on LAN (WoL)** to work, you can try using a different utility to send the magic packet. For example, if you're using [etherwake](../linux/etherwake.md), you can try using `wakeonlan` instead.
+If you're still not able to get **Wake on LAN (WoL)** to work, you can try using a different utility to send the magic packet. For example, if you're using [etherwake](../os/linux/etherwake.md), you can try using `wakeonlan` instead.
 
 ### Capturing Wake on LAN (WoL) packets
 
